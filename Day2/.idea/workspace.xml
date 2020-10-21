@@ -36,7 +36,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -82,6 +82,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2618" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603161712500">
@@ -92,33 +93,33 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2516" y="469" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603159109854" />
-    <state width="1362" height="398" key="GridCell.Tab.0.bottom" timestamp="1603166946966">
+    <state width="1899" height="398" key="GridCell.Tab.0.bottom" timestamp="1603244698922">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1362" height="398" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603166946966" />
-    <state width="1362" height="398" key="GridCell.Tab.0.center" timestamp="1603166946966">
+    <state width="1899" height="398" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603244698922" />
+    <state width="1899" height="398" key="GridCell.Tab.0.center" timestamp="1603244698922">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1362" height="398" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603166946966" />
-    <state width="1362" height="398" key="GridCell.Tab.0.left" timestamp="1603166946966">
+    <state width="1899" height="398" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603244698922" />
+    <state width="1899" height="398" key="GridCell.Tab.0.left" timestamp="1603244698922">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1362" height="398" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603166946966" />
-    <state width="1362" height="398" key="GridCell.Tab.0.right" timestamp="1603166946966">
+    <state width="1899" height="398" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603244698922" />
+    <state width="1899" height="398" key="GridCell.Tab.0.right" timestamp="1603244698922">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1362" height="398" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603166946966" />
-    <state x="2365" y="165" key="SettingsEditor" timestamp="1603159490119">
+    <state width="1899" height="398" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603244698922" />
+    <state x="2691" y="144" key="SettingsEditor" timestamp="1603242514874">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2365" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603159490119" />
+    <state x="2691" y="144" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603242514874" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>44</line>
+          <line>47</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

@@ -1,5 +1,8 @@
 # This program serves as a solution-finder for the difficult challenges found on pythonchallenge.com
 # where I left off: http://www.pythonchallenge.com/pc/def/equality.html
+# I think this is the solution for challenge 3: http://www.pythonchallenge.com/pc/def/linkedlist.html
+import re
+
 
 def challenge1(input_string):
     # solves the puzzle by iterating through the string and shifting the letters by 2
@@ -39,21 +42,37 @@ def challenge2(input_string2):
 
 def challenge3(input_string3):
     answer = ''
-    for i in range(4, len(input_string3)-4):
-        if input_string3[i].islower():
-            lower_string = input_string3[i-3:i]
-            upper_string = input_string3[i+1:i+4]
-            lower_limit = input_string3[i-4]
-            upper_limit = input_string3[i+4]
-            print(lower_string, upper_string, lower_limit, upper_limit)
-            if lower_string.isupper() and upper_string.isupper() and lower_limit.islower() and upper_limit.islower():
-                answer = answer + input_string3[i]
-    print(answer)
+    for i in range(1, len(input_string3)-7):
+        if input_string3[i:i+3].isupper():
+            lower_string = input_string3[i:i+3]
+            middle_char = input_string3[i+3]
+            upper_string = input_string3[i+4:i+7]
+            final_char = input_string3[i+8]
+            first_char = input_string3[i-1]
+            print(lower_string, upper_string, middle_char, final_char)
+            if lower_string.isupper()  \
+                    and upper_string.isupper() \
+                    and middle_char.islower() \
+                    and final_char.islower() \
+                    and first_char.islower():
+                answer = answer + middle_char
+    print("answer: ", answer)
+
+
+def challenge3_attempt2(str_input):
+    pattern = '[a-z][A-Z][A-Z][A-Z][a-z][A-Z][A-Z][A-Z][a-z]'
+    answer = re.findall(pattern, str_input, re.MULTILINE)
+
+    answer_string = ""
+
+    for row in answer:
+        answer_string = answer_string + row[4]
+    print(answer_string)
 
 
 if __name__ == '__main__':
 
-    with open('testfile.txt', 'r') as file:
+    with open('challenge3.txt', 'r') as file:
         string = file.read()
 
-    challenge3(string)
+    challenge3_attempt2(string)
