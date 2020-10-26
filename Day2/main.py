@@ -2,6 +2,8 @@
 # where I left off: http://www.pythonchallenge.com/pc/def/equality.html
 # I think this is the solution for challenge 3: http://www.pythonchallenge.com/pc/def/linkedlist.html
 import re
+import urllib.request
+import urllib.parse
 
 
 def challenge1(input_string):
@@ -70,9 +72,28 @@ def challenge3_attempt2(str_input):
     print(answer_string)
 
 
+def challenge4():
+    # Solution: http://www.pythonchallenge.com/pc/def/peak.html
+    base_url = 'http://www.pythonchallenge.com/pc/def/linkedlist.php'
+    values = {'nothing': '25357'}
+    data = urllib.parse.urlencode(values)
+
+    for i in range(1, 400):
+        # we will iterate throught the urls, finding the next number and re-encoding our url
+        response = urllib.request.urlopen(base_url + '?' + data)
+        html = str(response.read())
+
+        m = re.search('nothing is \d{3,10}', html)
+        m2 = re.search('\d{3,10}', m.group())
+        next_number = m2.group()
+        print(i, next_number)
+        values['nothing'] = next_number
+        data = urllib.parse.urlencode(values)
+
+
 if __name__ == '__main__':
 
-    with open('challenge3.txt', 'r') as file:
-        string = file.read()
+    #with open('challenge3.txt', 'r') as file:
+        #string = file.read()
 
-    challenge3_attempt2(string)
+    challenge4()
