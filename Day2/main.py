@@ -4,6 +4,7 @@
 import re
 import urllib.request
 import urllib.parse
+import pickle
 
 
 def challenge1(input_string):
@@ -44,15 +45,15 @@ def challenge2(input_string2):
 
 def challenge3(input_string3):
     answer = ''
-    for i in range(1, len(input_string3)-7):
-        if input_string3[i:i+3].isupper():
-            lower_string = input_string3[i:i+3]
-            middle_char = input_string3[i+3]
-            upper_string = input_string3[i+4:i+7]
-            final_char = input_string3[i+8]
-            first_char = input_string3[i-1]
+    for i in range(1, len(input_string3) - 7):
+        if input_string3[i:i + 3].isupper():
+            lower_string = input_string3[i:i + 3]
+            middle_char = input_string3[i + 3]
+            upper_string = input_string3[i + 4:i + 7]
+            final_char = input_string3[i + 8]
+            first_char = input_string3[i - 1]
             print(lower_string, upper_string, middle_char, final_char)
-            if lower_string.isupper()  \
+            if lower_string.isupper() \
                     and upper_string.isupper() \
                     and middle_char.islower() \
                     and final_char.islower() \
@@ -91,9 +92,27 @@ def challenge4():
         data = urllib.parse.urlencode(values)
 
 
+def challenge5():
+    # Solution: http://www.pythonchallenge.com/pc/def/channel.html
+    # This challenge seems to require the use of "pickle" serialization
+
+    page_data = urllib.request.urlopen('http://www.pythonchallenge.com/pc/def/banner.p')
+
+    decoded = pickle.load(page_data)
+    # print(decoded)
+    # It looks like a list of tuples which describe '#' characters that form something
+
+    for i in range(0, len(decoded)):
+        string = ''
+        for row in range(0, len(decoded[i])):
+            # iterate through the row, creating the string from each tuple of characters
+            character, length = decoded[i][row]
+            string = string + character * length
+        print(string)
+
+
 if __name__ == '__main__':
+    # with open('challenge3.txt', 'r') as file:
+    # string = file.read()
 
-    #with open('challenge3.txt', 'r') as file:
-        #string = file.read()
-
-    challenge4()
+    challenge5()
